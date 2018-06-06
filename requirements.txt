@@ -1,0 +1,15 @@
+pywinauto
+bs4
+requests
+dill
+click
+six
+flask
+Pillow
+pytesseract
+pandas
+pyperclip
+rqopen-client
+easyutils
+tushare
+

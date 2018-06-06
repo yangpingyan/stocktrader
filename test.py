@@ -1,4 +1,4 @@
-import time
+# coding:utf8
 
 print("hello trader")
 print("hello github")

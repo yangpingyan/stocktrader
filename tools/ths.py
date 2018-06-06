@@ -8,7 +8,8 @@ import logging
 import tushare as ts
 import time
 import random
-import .. config
+from stocktrader.api import use
+
 stockID_g= '002413'
 amount_g = 5000
 
@@ -26,7 +27,7 @@ log.handlers.append(ch)
 log.debug("---Mission start---")
 
 
-user = easytrader.use('ths')
+user = use('ths')
 user.connect(r'C:\\同花顺软件\\同花顺\\xiadan.exe')
 
 while(True) :

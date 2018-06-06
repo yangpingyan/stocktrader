@@ -22,9 +22,9 @@ Quick Start
 
 ::
 
-    import easytrader
+    import stocktrader
 
-    user = easytrader.use('ht')
+    user = stocktrader.use('ht')
 
     user.prepare('account.json')
 
@@ -76,14 +76,14 @@ return::
 """
 
 setup(
-    name='easytrader',
-    version='0.14.0',
+    name='stocktrader',
+    version='0.0.1',
     description='A utility for China Stock Trade',
     long_description=long_desc,
-    author='shidenggui',
-    author_email='longlyshidenggui@gmail.com',
+    author='yangpingyan',
+    author_email='yangpingyan@gmail.com',
     license='BSD',
-    url='https://github.com/shidenggui/easytrader',
+    url='https://github.com/yangpingyan/stocktrader',
     keywords='China stock trade',
     install_requires=[
         'requests', 'six', 'rqopen-client', 'easyutils', 'flask', 'pywinauto',
@@ -91,15 +91,13 @@ setup(
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'License :: OSI Approved :: BSD License'
     ],
-    packages=['easytrader', 'easytrader.config'],
+    packages=['stocktrader', 'stocktrader.config'],
     package_data={
         '': ['*.jar', '*.json'],
         'config': ['config/*.json'],

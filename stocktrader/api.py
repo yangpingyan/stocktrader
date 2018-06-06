@@ -21,6 +21,7 @@ def use(broker, debug=True, **kwargs):
         >>> user = easytrader.use('xq')
         >>> user.prepare('xq.json')
     """
+    log.debug("use source")
     if not debug:
         log.setLevel(logging.INFO)
     elif broker.lower() in ['ths', '同花顺客户端']:

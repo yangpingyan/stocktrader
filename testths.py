@@ -28,7 +28,7 @@ log.handlers.append(ch)
 log.debug("---Mission start---")
 
 user = use('ths')
-
+user.balance()
 user.connect(r'C:\\同花顺软件\\同花顺\\xiadan.exe')
 
 while (True):

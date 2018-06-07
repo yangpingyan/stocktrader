@@ -2,36 +2,22 @@
 from setuptools import setup
 
 long_desc = """
-stocktrader
-===============
-
-* trade stock in China Stock
+stocktrader: trade stock in China Stock
 
 Installation
 --------------
-
-pip install stocktrader
+    pip install stocktrader
 
 Upgrade
 ---------------
-
     pip install stocktrader --upgrade
 
 Quick Start
 --------------
-
-::
-
     import stocktrader
-
-    user = stocktrader.use('ht')
-
-    user.prepare('account.json')
-
+    user = stocktrader.use('ths')
     user.balance
-
 return::
-
     [{ 'asset_balance': '资产总值',
        'current_balance': '当前余额',
        'enable_balance': '可用金额',
@@ -40,9 +26,7 @@ return::
        'pre_interest': '预计利息' ]}
 
     user.position
-
 return::
-
     [{'cost_price': '摊薄成本价',
        'current_amount': '当前数量',
        'enable_amount': '可卖数量',
@@ -55,9 +39,7 @@ return::
        'stock_name': '证券名称'}]
 
     user.entrust
-
 return::
-
     [{'business_amount': '成交数量',
       'business_price': '成交价格',
       'entrust_amount': '委托数量',

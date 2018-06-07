@@ -9,27 +9,18 @@ import tushare as ts
 import time
 import random
 import stocktrader
-
+from stocktrader.log import log
 from stocktrader.api import use
 
-stockID_g = '002413'
-amount_g = 5000
+stockID_g = "002413"
+amount_g = 100
 
-logging.getLogger().handlers = []
-logging.getLogger("log").handlers = []
-log = logging.getLogger("log")
-log.setLevel(logging.DEBUG)
-log.propagate = False
-fmt = logging.Formatter('[%(levelname)s]  %(lineno)s: %(message)s')
-ch = logging.StreamHandler()
-ch.setFormatter(fmt)
-log.handlers.append(ch)
 
 log.debug("---Mission start---")
 
 user = use('ths')
-user.balance()
 user.connect(r'C:\\同花顺软件\\同花顺\\xiadan.exe')
+
 
 while (True):
     input_str = input("THS Command:")

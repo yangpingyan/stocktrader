@@ -186,6 +186,14 @@ class ClientTrader:
         else:
             return {'message': '委托单状态错误不能撤单, 该委托单可能已经成交或者已撤'}
 
+    def cancel_all_entrusts(self):
+        self._refresh()
+        self._switch_left_menus(['撤单[F3]'])
+        self._main.window(
+            control_id=self._config.TRADE_CANCEL_ALL_ENTRUSTS_ID,
+            class_name='Button').click()
+        return self._handle_pop_dialogs()
+
     def buy(self, security, price, amount, **kwargs):
         self._switch_left_menus(['买入[F1]'])
 

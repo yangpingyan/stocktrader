@@ -27,4 +27,7 @@ def use(broker, debug=True, **kwargs):
     elif broker.lower() in ['ths', '同花顺客户端']:
         from .clienttrader import ClientTrader
         return ClientTrader()
+    elif broker.lower() in ['yjb', '佣金宝']:
+        from .clienttrader import ClientTrader
+        return ClientTrader()
 

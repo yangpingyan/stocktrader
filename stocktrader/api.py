@@ -21,10 +21,10 @@ def use(broker, debug=True, **kwargs):
         >>> user = easytrader.use('xq')
         >>> user.prepare('xq.json')
     """
-    log.debug("use source1")
+
     if not debug:
         log.setLevel(logging.INFO)
-    elif broker.lower() in ['ths', '同花顺客户端']:
+    if broker.lower() in ['ths', '同花顺客户端']:
         from .clienttrader import ClientTrader
         return ClientTrader()
     elif broker.lower() in ['yjb', '佣金宝']:
